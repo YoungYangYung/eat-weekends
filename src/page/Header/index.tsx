@@ -9,7 +9,7 @@ const Header = ()=>{
 
     return (
         <div className='header-content'>
-            <SearchBar onChange={search} shape='round' placeholder='搜搜看吧' showCancel/>
+            <SearchBar className='search' onChange={search} shape='round' placeholder='搜搜看吧' showCancel/>
         </div>
     );
 }
