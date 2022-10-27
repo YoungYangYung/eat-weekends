@@ -1,10 +1,15 @@
-import React from 'react';
+import React, { useCallback } from 'react';
+import { SearchBar } from 'zarm';
 import './style.scss';
 
 const Header = ()=>{
+    const search = useCallback((e: string)=>{
+        console.log('===search',e)
+    },[])
+
     return (
         <div className='header-content'>
-            <span>周末吃什么</span>
+            <SearchBar onChange={search} shape='round' placeholder='搜搜看吧' showCancel/>
         </div>
     );
 }

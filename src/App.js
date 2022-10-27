@@ -3,6 +3,7 @@ import "./App.css";
 import { Provider } from 'react-redux';
 import store from './redux/store';
 import Home from './page';
+import 'zarm/dist/zarm.css';
 
 function App() {
     return (
