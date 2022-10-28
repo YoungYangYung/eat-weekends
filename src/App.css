@@ -42,6 +42,10 @@
   display: flex;
 }
 
+.msx-5 {
+  margin: 5px 0;
+}
+
 input, input:focus,
 textarea, textarea:focus,
 select, select:focus {
