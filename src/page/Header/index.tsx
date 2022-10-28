@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { NavBar, Modal, Button } from "zarm";
+import { isWeiXin } from "../../utils";
 import MyIcon from "../Component/Icon";
 import "./style.scss";
 
@@ -18,7 +19,7 @@ const Header = () => {
 						type="icon-wen-hao"
 					/>
 				}
-				title="周末吃什么"
+				title={isWeiXin() ? '' : '周末吃什么'}
 				right={
 					<MyIcon className="search-icon" type="icon-sousuoleimu" />
 				}
