@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/eat-weekends/static/css/main.a40dd6e6.css",
-    "main.js": "/eat-weekends/static/js/main.6e1531e3.js",
+    "main.js": "/eat-weekends/static/js/main.88ab68c8.js",
     "static/js/787.0f678e61.chunk.js": "/eat-weekends/static/js/787.0f678e61.chunk.js",
     "index.html": "/eat-weekends/index.html",
     "main.a40dd6e6.css.map": "/eat-weekends/static/css/main.a40dd6e6.css.map",
-    "main.6e1531e3.js.map": "/eat-weekends/static/js/main.6e1531e3.js.map",
+    "main.88ab68c8.js.map": "/eat-weekends/static/js/main.88ab68c8.js.map",
     "787.0f678e61.chunk.js.map": "/eat-weekends/static/js/787.0f678e61.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.a40dd6e6.css",
-    "static/js/main.6e1531e3.js"
+    "static/js/main.88ab68c8.js"
   ]
 }
