@@ -12,7 +12,7 @@ const Header = ()=>{
 
     return (
         <div className='search-content flex'>
-            <MyIcon onClick={()=>{navigate('/')}} className="back-icon" type="icon-back" />
+            <MyIcon onClick={()=>{navigate('/eat-weekends')}} className="back-icon" type="icon-back" />
             <SearchBar className='search' onChange={search} shape='round' placeholder='搜搜看吧' showCancel/>
         </div>
     );
