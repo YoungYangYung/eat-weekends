@@ -48,8 +48,8 @@ const HomeRouter = ({ initData }: IProps) => {
     return (
         <BrowserRouter>
             <Routes>
-                <Route path="/" element={<Home />}></Route>
-                <Route path="/search" element={<SearchHome />}></Route>
+                <Route path="/eat-weekends" element={<Home />}></Route>
+                <Route path="/eat-weekends/search" element={<SearchHome />}></Route>
             </Routes>
         </BrowserRouter>
     );
