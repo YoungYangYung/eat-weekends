@@ -12,19 +12,19 @@ export const DishesList = [
 // 菜系
 export const ClassList = [
     {
-        name: '荤菜',
+        name: '荤菜系列',
         id: 'h1'
     },
     {
-        name: '素菜',
+        name: '素菜系列',
         id: 's1'
     },
     {
-        name: '主食',
+        name: '主食系列',
         id: 'z1'
     },
     {
-        name: '饮料',
+        name: '饮料系列',
         id: 'y1'
     },
 ];

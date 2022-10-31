@@ -2,10 +2,12 @@ import React, { useState } from "react";
 import { NavBar, Modal, Button } from "zarm";
 import { isWeiXin } from "../../utils";
 import MyIcon from "../Component/Icon";
+import { useNavigate } from 'react-router-dom';
 import "./style.scss";
 
 const Header = () => {
 	const [isShow, setIsShow] = useState(false);
+    const navigate = useNavigate();
 
 	return (
 		<div className="header-content">
@@ -21,7 +23,7 @@ const Header = () => {
 				}
 				title={isWeiXin() ? '' : '周末吃什么'}
 				right={
-					<MyIcon className="search-icon" type="icon-sousuoleimu" />
+					<MyIcon onClick={()=>{navigate('/search')}} className="search-icon" type="icon-sousuoleimu" />
 				}
 			/>
 

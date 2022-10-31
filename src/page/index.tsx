@@ -1,12 +1,69 @@
-import React from 'react';
-import Header from './Header';
+import React, { useEffect } from "react";
+import Header from "./Header";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import SearchHeader from "./Search";
+import Content from "./Content";
+import { connect } from "react-redux";
+import { Init_Data } from "../redux/action";
+import { getClassList } from "../api";
+import { Loading, ActivityIndicator } from "zarm";
 
-const Home = ()=>{
+const Home = () => {
     return (
         <div>
-            <Header/>
+            <Header />
+            <Content />
         </div>
-    )
+    );
+};
+
+const SearchHome = () => {
+    return (
+        <div>
+            <SearchHeader />
+            <Content />
+        </div>
+    );
+};
+
+interface IProps {
+    initData: (data: any) => void;
 }
 
-export default React.memo(Home);
+const HomeRouter = ({ initData }: IProps) => {
+    useEffect(() => {
+        Loading.show({ content: <ActivityIndicator size="lg" /> });
+        getClassList()
+            .then((res) => {
+                initData(res);
+            })
+            .catch(() => {
+                initData(null);
+            })
+            .finally(() => {
+                Loading.hide();
+            });
+    }, []);
+
+    return (
+        <BrowserRouter>
+            <Routes>
+                <Route path="/" element={<Home />}></Route>
+                <Route path="/search" element={<SearchHome />}></Route>
+            </Routes>
+        </BrowserRouter>
+    );
+};
+
+const mapDispatchToProps = (dispatch) => {
+    return {
+        initData: (payload) => {
+            dispatch({
+                type: Init_Data,
+                payload,
+            });
+        },
+    };
+};
+
+export default connect(null, mapDispatchToProps)(React.memo(HomeRouter));

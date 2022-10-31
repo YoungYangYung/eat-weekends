@@ -1,13 +1,22 @@
+import { Init_Data } from "../action";
+
 const initState = {
-    count: 10
+    classList: [],
+    dishesList: [],
+    shoppingCartList: [],
 }
 
 export const countReducer = (state = initState, action)=>{
     switch(action.type) {
-        case 'add':
+        case Init_Data:
             const { payload } = action;
+            if(!payload){
+                return state;
+            }
             return {
-                count: state.count + payload || 1
+                ...state,
+                classList: payload.classList,
+                dishesList: payload.dishesList
             }
         default:
             return state;
