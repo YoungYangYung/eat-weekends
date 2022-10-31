@@ -19,7 +19,7 @@ const Content = ({classList, dishesList}: IProps)=>{
             <div className='class-module'>
                 {classList.map((c, index)=>{
                     return (
-                        <div className={cls(['class-module-item spacing', index ===1 && 'select'])} key={`content-class-${index}`}>
+                        <div className={cls(['class-module-item spacing', index ===3 && 'select'])} key={`content-class-${index}`}>
                             {c.name}
                         </div>
                     )
