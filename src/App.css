@@ -45,6 +45,8 @@
   height: 100%;
   flex-direction: column;
   flex: 1;
+  overflow-y: hidden;
+  position: relative;
 }
 
 /* 以下为公共样式 */

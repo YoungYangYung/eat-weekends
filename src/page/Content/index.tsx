@@ -3,6 +3,8 @@ import { connect } from 'react-redux';
 import { isValidArray } from '../../utils';
 import { IState } from '../type';
 import cls from 'classnames';
+import ClassModule from './ClassModule';
+import DishesModule from './DishesModule';
 import './style.scss';
 
 interface IProps extends IState {
@@ -12,22 +14,13 @@ interface IProps extends IState {
 const Content = ({classList, dishesList}: IProps)=>{
     console.log('===',classList,dishesList)
 
-    if(!isValidArray(classList) || !isValidArray(dishesList)) return null;
     return (
         <div className='container flex'>
             {/* 左侧菜单 */}
-            <div className='class-module'>
-                {classList.map((c, index)=>{
-                    return (
-                        <div className={cls(['class-module-item spacing', index ===3 && 'select'])} key={`content-class-${index}`}>
-                            {c.name}
-                        </div>
-                    )
-                })}
-            </div>
+            <ClassModule classList={classList}/>
 
             {/* 右侧详情 */}
-            <div className='detail-module'></div>
+            <DishesModule dishesList={dishesList}/>
         </div>
     );
 }
