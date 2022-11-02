@@ -7,19 +7,21 @@ import { connect } from "react-redux";
 import { Init_Data } from "../redux/action";
 import { getClassList } from "../api";
 import { Loading, ActivityIndicator } from "zarm";
+import Footer from './Footer';
 
 const Home = () => {
     return (
-        <div>
+        <div className="home flex">
             <Header />
             <Content />
+            <Footer/>
         </div>
     );
 };
 
 const SearchHome = () => {
     return (
-        <div>
+        <div className="home">
             <SearchHeader />
             <Content />
         </div>
@@ -49,7 +51,10 @@ const HomeRouter = ({ initData }: IProps) => {
         <BrowserRouter>
             <Routes>
                 <Route path="/eat-weekends" element={<Home />}></Route>
-                <Route path="/eat-weekends/search" element={<SearchHome />}></Route>
+                <Route
+                    path="/eat-weekends/search"
+                    element={<SearchHome />}
+                ></Route>
             </Routes>
         </BrowserRouter>
     );

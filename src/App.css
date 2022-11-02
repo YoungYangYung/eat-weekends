@@ -37,6 +37,16 @@
   }
 }
 
+#root {
+  height: 100%;
+}
+
+.home {
+  height: 100%;
+  flex-direction: column;
+  flex: 1;
+}
+
 /* 以下为公共样式 */
 .flex {
   display: flex;
