@@ -8,6 +8,7 @@ const Footer = () => {
             <div className="footer-container-content flex">
                 <div className="footer-container-content-left flex">
                     <MyIcon className="icon-wan" type="icon-wan" />
+                    <div className="footer-container-content-left-badge badge">5</div>
                 </div>
                 <div className="footer-container-content-c flex">
                     <div className="footer-container-content-c-no">客官点菜吧～</div>

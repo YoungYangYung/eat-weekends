@@ -57,6 +57,9 @@
 
         &-item {
             margin-bottom: 15px;
+            box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.1);
+            position: relative;
+
             &-img {
                 width: 100px;
                 height: 100px;
@@ -72,6 +75,13 @@
             &-dec {
                 font-size: 14px;
                 color: #666;
+            }
+            &-icon {
+                font-size: 20px;
+                color: #666;
+                position: absolute;
+                bottom: 10px;
+                right: 10px;
             }
         }
     }

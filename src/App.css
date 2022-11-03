@@ -58,6 +58,17 @@
   margin: 5px 0;
 }
 
+.badge {
+  width: 12px;
+  height: 12px;
+  font-size: 12px;
+  background: #ff5050;
+  border-radius: 100%;
+  color: #fff;
+  text-align: center;
+  font-weight: 600;
+}
+
 input, input:focus,
 textarea, textarea:focus,
 select, select:focus {
