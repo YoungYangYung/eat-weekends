@@ -1,8 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { isValidArray } from '../../utils';
 import { IState } from '../type';
-import cls from 'classnames';
 import ClassModule from './ClassModule';
 import DishesModule from './DishesModule';
 import './style.scss';
