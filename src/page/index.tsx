@@ -8,6 +8,7 @@ import { Init_Data } from "../redux/action";
 import { getClassList } from "../api";
 import { Loading, ActivityIndicator } from "zarm";
 import Footer from './Footer';
+import './index.scss';
 
 const Home = () => {
     return (
@@ -50,11 +51,8 @@ const HomeRouter = ({ initData }: IProps) => {
     return (
         <BrowserRouter>
             <Routes>
-                <Route path="/eat-weekends" element={<Home />}></Route>
-                <Route
-                    path="/eat-weekends/search"
-                    element={<SearchHome />}
-                ></Route>
+                <Route path="/" element={<Home />}></Route>
+                <Route path="/search" element={<SearchHome />}></Route>
             </Routes>
         </BrowserRouter>
     );

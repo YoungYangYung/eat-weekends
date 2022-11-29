@@ -23,6 +23,7 @@
             justify-content: center;
             position: relative;
             &-badge {
+                font-family: serif;
                 position: absolute;
                 top: 5px;
                 right: 5px;
@@ -47,5 +48,12 @@
             padding: 0 5px;
             box-shadow: 5px 0px 10px rgba(0, 0, 0, 0.1);
         }
+    }
+
+    &-detail-module {
+        background: #fff;
+        padding: 10px;
+        max-height: 400px;
+        min-height: 200px;
     }
 }

@@ -1,0 +1,12 @@
+.err-tip {
+    max-width: 120px;
+    &-icon {
+        font-size: 20px;
+    }
+
+    &-text {
+        color: #fff;
+        font-size: 16px;
+        margin-top: 5px;
+    }
+}

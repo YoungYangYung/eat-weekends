@@ -2,7 +2,7 @@
   "name": "eat-weekends",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://youngyangyung.github.io/eat-weekends/",
+  "homepage": ".",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.1",
     "@testing-library/react": "^12.1.2",

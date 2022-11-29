@@ -23,7 +23,7 @@ const Header = () => {
 				}
 				title={isWeiXin() ? '' : '周末吃什么'}
 				right={
-					<MyIcon onClick={()=>{navigate('/eat-weekends/search')}} className="search-icon" type="icon-sousuoleimu" />
+					<MyIcon onClick={()=>{navigate('/search')}} className="search-icon" type="icon-sousuoleimu" />
 				}
 			/>
 
