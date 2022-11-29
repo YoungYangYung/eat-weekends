@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { connect } from "react-redux";
 import { Toast } from 'zarm';
+import { Shopping_Cart_Update, Del_All_Shopping_Cart } from "../../redux/action";
 import { isValidArray } from "../../utils";
 import MyIcon from "../Component/Icon";
 import { IState } from "../type";
@@ -9,9 +10,11 @@ import "./style.scss";
 
 interface IProps extends IState {
 	isShowClass?: boolean;
+	shoppingCartUpdate: (data: any)=>void;
+	delAllShoppingCart: ()=>void;
 }
 
-const Footer = ({ shoppingCartList, classList }: IProps) => {
+const Footer = ({ shoppingCartList, shoppingCartUpdate, delAllShoppingCart }: IProps) => {
 	const [isShowDetail, setIsShowDetail] = useState(false);
 
 	return (
@@ -50,6 +53,8 @@ const Footer = ({ shoppingCartList, classList }: IProps) => {
 				shoppingCartList={shoppingCartList}
 				setIsShowDetail={setIsShowDetail}
 				visible={isShowDetail}
+				shoppingCartUpdate={shoppingCartUpdate}
+				delAllShoppingCart={delAllShoppingCart}
 			/>
 		</div>
 	);
@@ -59,4 +64,20 @@ const mapStateToProps = (state: IState) => {
 	return state;
 };
 
-export default connect(mapStateToProps)(React.memo(Footer));
+const mapDispatchToProps = (dispatch)=>{
+    return {
+        shoppingCartUpdate: (payload)=>{
+            dispatch({
+                type: Shopping_Cart_Update,
+                payload,
+            })
+        },
+		delAllShoppingCart: (payload)=>{
+			dispatch({
+                type: Del_All_Shopping_Cart,
+            })
+		}
+    }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(React.memo(Footer));

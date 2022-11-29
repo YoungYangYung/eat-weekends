@@ -22,6 +22,7 @@
             align-items: center;
             justify-content: center;
             position: relative;
+
             &-badge {
                 font-family: serif;
                 position: absolute;
@@ -52,8 +53,73 @@
 
     &-detail-module {
         background: #fff;
-        padding: 10px;
+        // padding: 10px 10px 48px 10px;
         max-height: 400px;
         min-height: 200px;
+        overflow-y: auto;
+        position: relative;
+
+        &-header {
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 10px 20px 10px;
+            position: sticky;
+            top: 0;
+            background: #fff;
+
+            &-icon1 {
+                font-size: 16px !important;
+                color: #000 !important;
+                font-weight: bold;
+            }
+
+            &-span1 {
+                font-size: 16px;
+                color: #333;
+                font-weight: bold;
+            }
+
+            &-icon2 {
+                font-size: 14px !important;
+                color: #666 !important;
+            }
+
+            &-span2 {
+                font-size: 14px;
+                color: #666;
+                font-weight: normal;
+            }
+        }
+
+        &-content {
+            padding: 10px 10px 20px 10px;
+            &-item {
+                align-items: center;
+                justify-content: space-between;
+                margin-bottom: 15px;
+
+                &-left {
+                    align-items: center;
+
+                    &-img {
+                        width: 40px;
+                        height: 40px;
+                        border-radius: 4px;
+                    }
+
+                    &-name {
+                        font-size: 16px;
+                        color: #333;
+                        font-weight: bold;
+                        margin-left: 10px;
+                    }
+                }
+
+                &-icon {
+                    font-size: 20px;
+                    color: #ff5050 !important;
+                }
+            }
+        }
     }
 }

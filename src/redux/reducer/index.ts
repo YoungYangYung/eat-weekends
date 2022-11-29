@@ -1,5 +1,5 @@
 import { ClassList } from "../../data";
-import { Init_Data, Select_Class, Shopping_Cart_Update } from "../action";
+import { Init_Data, Select_Class, Shopping_Cart_Update, Del_All_Shopping_Cart } from "../action";
 
 const initState = {
     classList: [],
@@ -45,6 +45,11 @@ export const countReducer = (state = initState, action)=>{
             return {
                 ...state,
                 shoppingCartList
+            }
+        case Del_All_Shopping_Cart:
+            return {
+                ...state,
+                shoppingCartList: [],
             }
         default:
             return state;
